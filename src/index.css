@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    font-family: 'open sans', sans-serif;
+}
+
+/* .NavBrandFont {
+  font-family: 'Single Day';
+  font-style: normal;
+  font-weight: 400;
+} */
+
+/* .container{
+    width:90%;
+    margin-inline: auto;
+    max-width: 1200px;
+} */
+
+/* @media (min-width: 640px) {
+    .container {
+        max-width: 630px;
+        width:630px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        width:720px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1000px;
+        width:1000px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1240px;
+        width:1240px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1530px;
+        width:1530px;
+    }
+} */
