@@ -18,8 +18,8 @@ function Home() {
     <>
       <HeroSection NavBarHeight={navBarHeight ?? 0} />
       <AboutMe NavBarHeight={navBarHeight ?? 0} />
+      {/* <Experience NavBarHeight={navBarHeight ?? 0} /> */}
       <Projects NavBarHeight={navBarHeight ?? 0} />
-      <Experience NavBarHeight={navBarHeight ?? 0} />
 
       {/* { */}
 

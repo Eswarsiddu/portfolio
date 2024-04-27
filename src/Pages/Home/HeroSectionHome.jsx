@@ -56,13 +56,13 @@ function HeroSection({ NavBarHeight }) {
         <img src={BG1} alt="" className="w-full" />
       </div> */}
       <div
-        className="container px-6 mx-auto h-full flex flex-col-reverse md:flex-row justify-evenly md:justify-center items-center "
+        className="container px-6 mx-auto h-full flex flex-col-reverse md:flex-row justify-evenly md:justify-between items-center "
         // style={{ paddingTop: `${NavBarHeight + 15}px` }}
       >
         <div className="flex flex-col gap-4 h-1/2 justify-center ">
           <h1 className="flex flex-col gap-5">
             <span className=" opacity-50">Hi there, I am</span>
-            <span className=" block text-5xl md:text-6xl lg:text-7xl ">
+            <span className=" block text-5xl md:text-6xl lg:text-7xl font-medium ">
               Siddu Eswar
             </span>
             <span className=" text-2xl lg:text-4xl opacity-75 text-nowrap">
