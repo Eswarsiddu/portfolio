@@ -1,12 +1,14 @@
-import React, { forwardRef, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import {
   Link,
-  Navigate,
+  // Navigate,
   Outlet,
   useLocation,
   useNavigate,
 } from "react-router-dom";
 import { RouteNames } from "../Routes";
+import LOGO from "/icons/android-chrome-192x192.png";
+// import LOGO from "/icons/favicon-16x192.png"
 
 function NavBar() {
   const navRef = useRef(null);
@@ -17,8 +19,9 @@ function NavBar() {
   // forwardRef();
   return (
     <>
-      <header className=" absolute top-0 bg-white w-full" ref={navRef}>
-        <nav className="flex py-0 pt-4 px-1 sm:px-2">
+      {/* 3d426b */}
+      <header className=" sticky top-0 w-full z-20 bg-[#212121]" ref={navRef}>
+        <nav className="flex py-4 px-2 md:px-4">
           <NavLogo />
           {/* <h1
             className={
@@ -27,13 +30,13 @@ function NavBar() {
           >
             ESWAR
           </h1> */}
-          <ul className="flex py-0">
+          <ul className="flex py-0 text-white">
             <li className="py-0">
               <NavElement name="Home" to={RouteNames.HOME} />
             </li>
-            <li>
+            {/* <li>
               <NavElement name="Blogs" to={RouteNames.BLOGS} />
-            </li>
+            </li> */}
             <li>
               <NavElement name="Projects" to={RouteNames.PROJECTS} />
             </li>
@@ -63,7 +66,7 @@ function NavLogo() {
   return (
     <h1
       className={
-        "my-0 py-0 mr-auto font-bold text-5xl NavBrandFont text-red-900" +
+        "my-0 py-0 mr-auto font-bold text-5xl NavBrandFont text-white flex gap-2" +
         (isHome ? "" : " hover:cursor-pointer")
       }
       onClick={() => {
@@ -72,8 +75,8 @@ function NavLogo() {
         }
       }}
     >
-      {/* S. Eswar */}
-      ESWAR
+      <img src={LOGO} alt="" className=" w-14 aspect-square" />
+      {/* ESWAR */}
     </h1>
   );
 }
