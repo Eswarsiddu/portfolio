@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { RouteNames } from "../../Routes";
+
 export default function Projects() {
   return (
     <div className="my-6">
@@ -32,15 +35,18 @@ export default function Projects() {
           </p>
           <div className="flex gap-4">
             <a
-              className="p-2 bg-red-400 rounded text-white hover:bg-red-500"
+              className="p-2 bg-[#7932d9] rounded text-white hover:bg-[#6925c2] font-medium"
               href="https://www.spearsecurityforce.in/"
               target="_blank"
             >
               Visit site
             </a>
-            <button className="p-2 bg-[#7932d9] rounded text-white hover:bg-red-500">
+            <Link
+              to={RouteNames.SPEAR_SECURITY_FORCE}
+              className="p-2 bg-red-500 rounded text-white hover:bg-red-600 font-medium"
+            >
               Read More
-            </button>
+            </Link>
           </div>
         </div>
       </div>

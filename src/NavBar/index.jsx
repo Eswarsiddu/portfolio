@@ -37,9 +37,9 @@ function NavBar() {
             {/* <li>
               <NavElement name="Blogs" to={RouteNames.BLOGS} />
             </li> */}
-            <li>
+            {/* <li>
               <NavElement name="Projects" to={RouteNames.PROJECTS} />
-            </li>
+            </li> */}
             <li>
               <NavElement name="Contact me" to={RouteNames.CONTACT_ME} />
             </li>
