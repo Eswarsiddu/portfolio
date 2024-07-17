@@ -23,6 +23,9 @@ export default {
           "99%": { transform: "rotate(270deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
+        borderBackground: {
+          "0%": { borderBottom: "1px" },
+        },
         moveBox: {
           "0%": {
             transform: "translateX(0)",

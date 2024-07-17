@@ -13,6 +13,7 @@ function HeroSection({ NavBarHeight }) {
   const typedRef = useRef(null);
 
   useEffect(() => {
+    if (!typedRef.current) return;
     const typed = new Typed(typedRef.current, {
       strings: ["A Web^800", "An App^500"],
       typeSpeed: 50,
@@ -64,15 +65,20 @@ function HeroSection({ NavBarHeight }) {
         // style={{ paddingTop: `${NavBarHeight + 15}px` }}
       >
         <div className="flex flex-col gap-4 h-1/2 justify-start md:justify-center ">
-          <h1 className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5">
             <span className=" opacity-50">Hi there, I am</span>
-            <span className=" block text-5xl md:text-6xl lg:text-7xl font-medium ">
+            <h1 className=" block text-5xl md:text-6xl lg:text-7xl font-medium ">
               Siddu Eswar
-            </span>
-            <span className=" text-2xl lg:text-4xl opacity-75 text-nowrap">
+            </h1>
+            {/* <span className=" opacity-75 text-nowrap">
               <span ref={typedRef}></span>Developer
-            </span>
-          </h1>
+            </span> */}
+            <p className=" text-2xl">
+              websits and apps for success
+              {/* Looking for a Website or App? We Design & Brand for Success */}
+            </p>
+          </div>
+
           <div className="flex gap-4">
             <button className="p-2 bg-[#7932d9] rounded text-white hover:bg-[#6925c2] font-medium">
               Contact Me
@@ -101,6 +107,14 @@ function HeroSection({ NavBarHeight }) {
         {/* </div> */}
         {/* </div> */}
       </div>
+      <a
+        href={"#about-me-section"}
+        className=" bg-[#7932d9] w-12 h-12 rounded-full absolute bottom-8 left-1/2 -translate-x-1/2 flex justify-center items-center "
+      >
+        {/* <img src={AnglesDown} /> */}
+        <i className="fa-solid fa-angles-down mt-3 text-white text-2xl animate-bounce"></i>
+        {/* <ChevronsDown fill="#ffffff" stroke="1" /> */}
+      </a>
     </section>
   );
 }
