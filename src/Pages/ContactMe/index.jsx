@@ -42,12 +42,12 @@ function ContactMe() {
             type="text"
             placeholder="Enter your company name"
           />
-          <InputGroup
+          {/* <InputGroup
             label="Message"
             type="text"
             placeholder="Enter your message"
             required
-          />
+          /> */}
         </form>
       </div>
     </div>
