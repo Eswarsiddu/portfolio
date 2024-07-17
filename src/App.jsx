@@ -6,6 +6,7 @@ import Projects from "./Pages/Projects";
 import Blogs from "./Pages/Blogs";
 import ContactMe from "./Pages/ContactMe";
 import SpearSecurityForce from "./Pages/Projects/SpearSecurityForce";
+import ColourPalletChecker from "./Pages/ColourPalletChecker";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             element={<SpearSecurityForce />}
           />
         </Route>
+        <Route path="/pallet" element={<ColourPalletChecker />} />
       </Routes>
     </>
   );

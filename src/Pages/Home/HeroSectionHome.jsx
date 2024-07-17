@@ -6,6 +6,7 @@ import Lottie from "lottie-react";
 // import GIF from "../../Assets/9xev5OKerr.json";
 import GIF from "../../Assets/2TubWAO9Je.json";
 import Typed from "typed.js";
+import Packman from "/images/pacman.svg";
 
 function HeroSection({ NavBarHeight }) {
   const HeroSectionHeight = window.innerHeight - NavBarHeight;
@@ -13,10 +14,10 @@ function HeroSection({ NavBarHeight }) {
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
-      strings: ["A Full Stack^800", "An App^500", "A Game^500"],
+      strings: ["A Web^800", "An App^500"],
       typeSpeed: 50,
       backSpeed: 20,
-      // waitTime: 2000,
+      // waitTime: 800,
       loop: true,
       cursorChar: "|",
     });
@@ -27,7 +28,7 @@ function HeroSection({ NavBarHeight }) {
 
   return (
     <section
-      className=" text-white relative"
+      className=" text-white relative animate-bgChang"
       style={{
         height: `${HeroSectionHeight}px`,
         // backgroundImage: `url("https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")`,
@@ -52,6 +53,9 @@ function HeroSection({ NavBarHeight }) {
       //   // backgroundBlendMode: "overlay",
       // }}
     >
+      {/* <div className=" absolute top-0 w-12 h-12 animate-moveBox">
+        <img className=" animate-rotateImage" src={Packman} alt="" />
+      </div> */}
       {/* <div className=" absolute w-full h-full flex items-end">
         <img src={BG1} alt="" className="w-full" />
       </div> */}
@@ -59,7 +63,7 @@ function HeroSection({ NavBarHeight }) {
         className="container px-6 mx-auto h-full flex flex-col-reverse md:flex-row justify-evenly md:justify-between items-center "
         // style={{ paddingTop: `${NavBarHeight + 15}px` }}
       >
-        <div className="flex flex-col gap-4 h-1/2 justify-center ">
+        <div className="flex flex-col gap-4 h-1/2 justify-start md:justify-center ">
           <h1 className="flex flex-col gap-5">
             <span className=" opacity-50">Hi there, I am</span>
             <span className=" block text-5xl md:text-6xl lg:text-7xl font-medium ">
