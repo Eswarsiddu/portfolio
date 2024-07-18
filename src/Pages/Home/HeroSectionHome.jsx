@@ -66,10 +66,12 @@ function HeroSection({ NavBarHeight }) {
       >
         <div className="flex flex-col gap-4 h-1/2 justify-start md:justify-center ">
           <div className="flex flex-col gap-5">
-            <span className=" opacity-50">Hi there, I am</span>
-            <h1 className=" block text-5xl md:text-6xl lg:text-7xl font-medium ">
-              Siddu Eswar
+            <h1 className=" text-2xl ">
+              <span className="text-3xl">👋</span> Hi, I'm Siddu Eswar
             </h1>
+            {/* <h1 className=" block text-5xl md:text-6xl lg:text-7xl font-medium ">
+              Siddu Eswar
+            </h1> */}
             {/* <span className=" opacity-75 text-nowrap">
               <span ref={typedRef}></span>Developer
             </span> */}
