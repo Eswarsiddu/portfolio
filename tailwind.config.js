@@ -23,6 +23,16 @@ export default {
           "99%": { transform: "rotate(270deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
+        handWave: {
+          "0%": { transform: "rotate(15deg)" },
+          // "25%": { transform: "rotate(0deg)" },
+          // "26%": { transform: "rotate(30deg)" },
+          // "25%": { transform: "rotate(30deg)" },
+          "50%": { transform: "rotate(-10deg)" },
+          // "75%": { transform: "rotate(-30deg)" },
+          // "76%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(15deg)" },
+        },
         borderBackground: {
           "0%": { borderBottom: "1px" },
         },
@@ -80,6 +90,12 @@ export default {
         bgChange: "bgChangeKF 3s infinite",
         moveBox: "moveBox 5s ease-in-out infinite",
         rotateImage: "rotateImage 5s infinite",
+        handWave: "handWave 1s infinite",
+      },
+      fontFamily: {
+        Poippins: ["Poppins", "sans-serif"],
+        GaMaamli: ["Ga Maamli", "sans-serif"],
+        Playwrite: ["Playwrite HR Lijeva", "cursive"],
       },
       // width: {
       //   sm: "640px",

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import BG1 from "/images/svg.png";
 // import BG2 from "/images/svg(1).png";
 import Lottie from "lottie-react";
@@ -9,10 +9,30 @@ import Typed from "typed.js";
 import Packman from "/images/pacman.svg";
 
 function HeroSection({ NavBarHeight }) {
+  // const [HeroSectionHeight, setHeroSectionHeight] = useState(
+  //   window.innerHeight - NavBarHeight
+  // );
+
+  // useEffect(() => {
+
+  // }, []);
   const HeroSectionHeight = window.innerHeight - NavBarHeight;
   const typedRef = useRef(null);
 
   useEffect(() => {
+    // setTimeout(() => {
+    //   setHeroSectionHeight(window.innerHeight - NavBarHeight);
+    // }, 500);
+    // window.addEventListener("resize", () => {
+    //   setHeroSectionHeight(window.innerHeight - NavBarHeight);
+    // });
+    // if (!typedRef.current) {
+    //   return () => {
+    //     window.removeEventListener("resize", () => {
+    //       setHeroSectionHeight(window.innerHeight - NavBarHeight);
+    //     });
+    //   };
+    // }
     if (!typedRef.current) return;
     const typed = new Typed(typedRef.current, {
       strings: ["A Web^800", "An App^500"],
@@ -24,75 +44,55 @@ function HeroSection({ NavBarHeight }) {
     });
     return () => {
       typed.destroy();
+      // window.removeEventListener("resize", () => {
+      //   setHeroSectionHeight(window.innerHeight - NavBarHeight);
+      // });
     };
   }, []);
 
   return (
     <section
-      className=" text-white relative animate-bgChang"
+      className=" container mx-auto text-white relative animate-bgChang"
       style={{
         height: `${HeroSectionHeight}px`,
-        // backgroundImage: `url("https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")`,
-        // backgroundColor: "lineargradient(red,green)",
-        // backgroundPosition: "center",
-        // backgroundSize: "cover",
-        // backgroundRepeat: "no-repeat",
-        // filter: "blur(2px)",
-        // backgroundFilter: "blur(10px)",
-        // backgroundOpacity: "0.1",
-        // backgroundBlendMode: "overlay",
       }}
-      // style={{
-      //   backgroundImage: `url("https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")`,
-      //   // backgroundColor: "lineargradient(red,green)",
-      //   // backgroundPosition: "center",
-      //   // backgroundSize: "cover",
-      //   backgroundRepeat: "no-repeat",
-      //   // filter: "blur(2px)",
-      //   // backgroundFilter: "blur(10px)",
-      //   // backgroundOpacity: "0.1",
-      //   // backgroundBlendMode: "overlay",
-      // }}
     >
-      {/* <div className=" absolute top-0 w-12 h-12 animate-moveBox">
-        <img className=" animate-rotateImage" src={Packman} alt="" />
-      </div> */}
-      {/* <div className=" absolute w-full h-full flex items-end">
-        <img src={BG1} alt="" className="w-full" />
-      </div> */}
-      <div
-        className="container px-6 mx-auto h-full flex flex-col-reverse md:flex-row justify-evenly md:justify-between items-center "
-        // style={{ paddingTop: `${NavBarHeight + 15}px` }}
-      >
-        <div className="flex flex-col gap-4 h-1/2 justify-start md:justify-center ">
+      <div className=" px-4 md:px-6 mx-auto h-full flex flex-col lg:flex-row justify-start md:justify-center gap-4 lg:justify-between items-center ">
+        <div className="flex flex-col gap-4 h-full md:h-max justify-center bg-red-0">
           <div className="flex flex-col gap-5">
-            <h1 className=" text-2xl ">
-              <span className="text-3xl">👋</span> Hi, I'm Siddu Eswar
-            </h1>
-            {/* <h1 className=" block text-5xl md:text-6xl lg:text-7xl font-medium ">
-              Siddu Eswar
-            </h1> */}
-            {/* <span className=" opacity-75 text-nowrap">
-              <span ref={typedRef}></span>Developer
-            </span> */}
-            <p className=" text-2xl">
-              websits and apps for success
-              {/* Looking for a Website or App? We Design & Brand for Success */}
+            <div className=" text-xl flex items-center gap-2">
+              <span className="text-xl animate-handWave block origin-bottom-right">
+                👋
+              </span>
+              <span className=" font-GaMaamli">
+                Hi, I'm <span className="font-Playwrite font-bold">ESWAR</span>
+              </span>
+            </div>
+            <p className=" text-3xl font-GaMaamli">
+              Your{" "}
+              <span className="text-[#00f1ff] text-4xl">Website & App</span>{" "}
+              Superhero
+            </p>
+            <p className="text-lg">
+              Stuck in website or app trouble? I'm here to save the day! Get a
+              user-friendly website or powerful app that helps your business
+              shine.
             </p>
           </div>
 
           <div className="flex gap-4">
-            <button className="p-2 bg-[#7932d9] rounded text-white hover:bg-[#6925c2] font-medium">
-              Contact Me
+            <button className="py-2 px-4 bg-[#7932d9] rounded-md group text-white hover:bg-[#6925c2] font-mediu font-bold relative">
+              <span>Contact Me</span>
+              <span className="block absolute w-full h-full rounded-md left-0 top-0 group-hover:left-1 group-hover:top-1 -z-10 transition-all duration-100 ease-in group-hover:bg-[#00f1ff]"></span>
             </button>
-            <button className="p-2 bg-red-500 rounded text-white hover:bg-red-600 font-medium">
+            {/* <button className="p-2 bg-red-500 rounded text-white hover:bg-red-600 font-medium">
               Resume
-            </button>
+            </button> */}
           </div>
         </div>
         <Lottie
           animationData={GIF}
-          className="w-2/3 md:w-1/2"
+          className="w-3/5 hidden md:block lg:w-2/5 bg-green-3"
           style={
             {
               // width: "50%",
@@ -109,14 +109,24 @@ function HeroSection({ NavBarHeight }) {
         {/* </div> */}
         {/* </div> */}
       </div>
-      <a
-        href={"#about-me-section"}
-        className=" bg-[#7932d9] w-12 h-12 rounded-full absolute bottom-8 left-1/2 -translate-x-1/2 flex justify-center items-center "
+      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 opacity-20">
+        {/* Scrool down to see more */}
+        See What We Can Do
+      </div>
+      <button
+        // href={"#about-me-section"}
+        className=" bg-[#7932d9] w-12 h-12 rounded-full absolute bottom-3 left-1/2 -translate-x-1/2 flex justify-center items-center "
+        onClick={() => {
+          window.scrollTo({
+            top: window.innerHeight - NavBarHeight,
+            behavior: "smooth",
+          });
+        }}
       >
         {/* <img src={AnglesDown} /> */}
         <i className="fa-solid fa-angles-down mt-3 text-white text-2xl animate-bounce"></i>
         {/* <ChevronsDown fill="#ffffff" stroke="1" /> */}
-      </a>
+      </button>
     </section>
   );
 }

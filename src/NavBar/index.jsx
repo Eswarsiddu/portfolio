@@ -119,16 +119,24 @@ function NavLogo() {
   const isHome = location.pathname === RouteNames.HOME;
   const navigate = useNavigate();
   return (
-    <h1
-      className={isHome ? "" : " hover:cursor-pointer"}
+    <div
+      className={"flex gap-4 " + (isHome ? "" : " hover:cursor-pointer")}
       onClick={() => {
         if (!isHome) {
           navigate(RouteNames.HOME);
         }
       }}
     >
-      <img src={LOGO} alt="" className=" w-9 sm:w-10 lg:w-12 aspect-square" />
-    </h1>
+      <img
+        src={LOGO}
+        alt=""
+        className={" w-9 sm:w-10 lg:w-12 aspect-square "}
+      />
+      <div className="flex flex-col font-Playwrite text-white font-bold">
+        <span>Siddu</span>
+        <span className="ps-2">Eswar</span>
+      </div>
+    </div>
   );
 }
 
