@@ -48,7 +48,8 @@ function HeroSection({ NavBarHeight }) {
       </div>
       <div className="absolute bottom-16 left-1/2 -translate-x-1/2 opacity-20">
         {/* Scrool down to see more */}
-        See What We Can Do
+        {/* See What We Can Do */}
+        Scroll down to explore
       </div>
       <button
         className=" bg-[#7932d9] w-12 h-12 rounded-full absolute bottom-3 left-1/2 -translate-x-1/2 flex justify-center items-center "

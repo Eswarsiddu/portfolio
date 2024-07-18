@@ -16,20 +16,24 @@ const NavBarElements = [
     to: RouteNames.HOME,
   },
   {
-    name: "Contact me",
-    to: RouteNames.CONTACT_ME,
+    name: "Services",
+    to: RouteNames.SERVICES,
   },
   {
-    name: "Blogs",
-    to: RouteNames.BLOGS,
+    name: "About me",
+    to: RouteNames.ABOUT_ME,
   },
   {
     name: "Projects",
     to: RouteNames.PROJECTS,
   },
   {
-    name: "About me",
-    to: RouteNames.ABOUT_ME,
+    name: "Blogs",
+    to: RouteNames.BLOGS,
+  },
+  {
+    name: "Contact me",
+    to: RouteNames.CONTACT_ME,
   },
 ];
 

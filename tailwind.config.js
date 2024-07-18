@@ -82,6 +82,11 @@ export default {
           },
           // "100%": { backgroundColor: "#1A1A1A" },
         },
+        gradinetMove: {
+          "0%": { backgroundPosition: "0% center" },
+          "50%": { backgroundPosition: "100% center" },
+          "100%": { backgroundPosition: "0% center" },
+        },
       },
 
       animation: {
@@ -91,6 +96,7 @@ export default {
         moveBox: "moveBox 5s ease-in-out infinite",
         rotateImage: "rotateImage 5s infinite",
         handWave: "handWave 1s infinite",
+        gradinetMove: "gradinetMove 2s ease-int-out infinite",
       },
       fontFamily: {
         Poippins: ["Poppins", "sans-serif"],
