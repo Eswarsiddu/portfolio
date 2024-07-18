@@ -5,7 +5,10 @@ export default function Projects() {
   return (
     <div className="my-6 ">
       {/* <p>Projects</p> */}
-      <h2 className="my-10 text-3xl text-white text-center">Projects</h2>
+      <h2 className="my-10 text-3xl text-white text-center font-bold">
+        {/* Projects */}
+        PROJECTS
+      </h2>
       <div className="container mx-auto px-4 flex gap-16">
         <div className="w-1/3">
           <img

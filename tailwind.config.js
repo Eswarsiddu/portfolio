@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      xs: "350px",
+      ...defaultTheme.screens,
+    },
     extend: {
       keyframes: {
         fadeIn: {
@@ -83,9 +88,18 @@ export default {
           // "100%": { backgroundColor: "#1A1A1A" },
         },
         gradinetMove: {
-          "0%": { backgroundPosition: "0% center" },
-          "50%": { backgroundPosition: "100% center" },
-          "100%": { backgroundPosition: "0% center" },
+          "0%": {
+            backgroundPosition: "0% 50%",
+            backgroundSize: "200% 200%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+            backgroundSize: "200% 200%",
+          },
+          "100%": {
+            backgroundPosition: "0% 50%",
+            backgroundSize: "200% 200%",
+          },
         },
       },
 

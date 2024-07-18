@@ -111,9 +111,9 @@ function MenuIcon({ isOpen }) {
   // create animation for menu icon based on is open or not
   return (
     <div className="w-6 h-6 flex flex-col gap-1 justify-center">
-      <div className="w-full rounded h-1 bg-white"></div>
-      <div className="w-full rounded h-1 bg-white"></div>
-      <div className="w-full rounded h-1 bg-white"></div>
+      <div className="w-full rounded h-0.5 xs:h-1 bg-white"></div>
+      <div className="w-full rounded h-0.5 xs:h-1 bg-white"></div>
+      <div className="w-full rounded h-0.5 xs:h-1 bg-white"></div>
     </div>
   );
 }
@@ -124,7 +124,9 @@ function NavLogo() {
   const navigate = useNavigate();
   return (
     <div
-      className={"flex gap-4 " + (isHome ? "" : " hover:cursor-pointer")}
+      className={
+        "flex gap-4 items-center " + (isHome ? "" : " hover:cursor-pointer")
+      }
       onClick={() => {
         if (!isHome) {
           navigate(RouteNames.HOME);
@@ -134,9 +136,9 @@ function NavLogo() {
       <img
         src={LOGO}
         alt=""
-        className={" w-9 sm:w-10 lg:w-12 aspect-square "}
+        className={" w-9 h-9 md:w-10 lg:w-12 aspect-[1/1] "}
       />
-      <div className="flex flex-col font-Playwrite text-white font-bold">
+      <div className="flex flex-row md:flex-col font-Playwrite text-white font-medium xs:font-bold">
         <span>Siddu</span>
         <span className="ps-2">Eswar</span>
       </div>

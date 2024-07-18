@@ -6,6 +6,7 @@ import { useOutletContext } from "react-router-dom";
 import Projects from "./Projects";
 import Experience from "./Experience";
 import AboutMe from "./AboutMe";
+import Services from "./Services";
 
 function Home() {
   const { navBarHeight } = useOutletContext();
@@ -17,7 +18,8 @@ function Home() {
   return (
     <>
       <HeroSection NavBarHeight={navBarHeight ?? 0} />
-      <AboutMe NavBarHeight={navBarHeight ?? 0} />
+      {/* <AboutMe NavBarHeight={navBarHeight ?? 0} /> */}
+      <Services NavBarHeight={navBarHeight ?? 0} />
       {/* <Experience NavBarHeight={navBarHeight ?? 0} /> */}
       <Projects NavBarHeight={navBarHeight ?? 0} />
 
