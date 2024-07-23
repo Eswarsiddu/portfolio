@@ -1,11 +1,11 @@
-import webDev from "/images/services/website-creator-concept-illustration (1).png";
-import mobile2 from "/images/services/5794866-removebg-preview.png";
-import eCommerce from "/images/services/hand-drawn-flat-design-omnichannel-illustration.png";
+import webDev from "/images/services/website.png";
+import mobile2 from "/images/services/5794866.png";
+import eCommerce from "/images/services/handDrawn.png";
 // import seo from "/images/services/seo-analytics-team-concept-illustration.png";
-import seo from "/images/services/Wavy_Bus-11_Single-12 (1).png";
-import custom from "/images/services/search-concept-landing-page.png";
+import seo from "/images/services/WavyBus.png";
+import custom from "/images/services/search.png";
 // import maintainance from "/images/services/construction-concept-illustration.png";
-import maintainance from "/images/services/3819454-removebg-preview.png";
+import maintainance from "/images/services/3819454.png";
 
 export const Services = {
   WEB_DEVELOPMENT: "Web Development",
