@@ -2,7 +2,6 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   Link,
   // Navigate,
-  Outlet,
   useLocation,
   useNavigate,
 } from "react-router-dom";
@@ -10,7 +9,7 @@ import { RouteNames } from "../Routes";
 import LOGO from "/icons/android-chrome-192x192.png";
 // import LOGO from "/icons/favicon-16x192.png"
 
-const NavBarElements = [
+export const NavBarElements = [
   {
     name: "Home",
     to: RouteNames.HOME,
@@ -24,22 +23,20 @@ const NavBarElements = [
     to: RouteNames.ABOUT_ME,
   },
   {
-    name: "Projects",
+    name: "My Work",
     to: RouteNames.PROJECTS,
   },
-  {
-    name: "Blogs",
-    to: RouteNames.BLOGS,
-  },
+  // {
+  //   name: "Blogs",
+  //   to: RouteNames.BLOGS,
+  // },
   {
     name: "Contact me",
     to: RouteNames.CONTACT_ME,
   },
 ];
 
-function NavBar() {
-  const navRef = useRef(null);
-  const [navBarHeight, setNavBarHeight] = useState(0);
+function NavBar({ navRef, navBarHeight, setNavBarHeight }) {
   useLayoutEffect(() => {
     setNavBarHeight(navRef.current.clientHeight);
   });
@@ -68,8 +65,6 @@ function NavBar() {
           </div>
         </nav>
       </header>
-
-      <Outlet context={{ navBarHeight }} />
     </>
   );
 }
@@ -118,7 +113,7 @@ function MenuIcon({ isOpen }) {
   );
 }
 
-function NavLogo() {
+export function NavLogo() {
   const location = useLocation();
   const isHome = location.pathname === RouteNames.HOME;
   const navigate = useNavigate();
@@ -136,7 +131,7 @@ function NavLogo() {
       <img
         src={LOGO}
         alt=""
-        className={" w-9 h-9 md:w-10 lg:w-12 aspect-[1/1] "}
+        className={" w-9 h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 aspect-[1/1] "}
       />
       <div className="flex flex-row md:flex-col font-Playwrite text-white font-medium xs:font-bold">
         <span>Siddu</span>

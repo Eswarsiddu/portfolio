@@ -1,43 +1,5 @@
 import React from "react";
-
-const ServicesData = [
-  {
-    title: "Web Development",
-    description:
-      "We create high-performing websites that are easy to navigate, visually appealing, and optimized for search engines.",
-    icon: "fa-laptop-code",
-  },
-  {
-    title: "Mobile Development",
-    description:
-      "We develop mobile apps that are user-friendly, visually stunning, and optimized for performance.",
-    icon: "fa-mobile-screen",
-  },
-  {
-    title: "E-Commerce Solutions",
-    description:
-      "We build e-commerce websites that are secure, scalable, and designed to drive sales.",
-    icon: "fa-shopping-cart",
-  },
-  {
-    title: "Custom Solutions",
-    description:
-      "We create custom web and mobile applications that are tailored to your unique needs and goals.",
-    icon: "fa-cogs",
-  },
-  {
-    title: "SEO Services",
-    description:
-      "We offer comprehensive SEO services to help your website rank higher in search engine results and attract more visitors.",
-    icon: "fa-search",
-  },
-  {
-    title: "Maintenance & Support",
-    description:
-      "We provide ongoing maintenance and support services to keep your website or app running smoothly and securely.",
-    icon: "fa-tools",
-  },
-];
+import { ServicesData } from "../../InfoDatas/ServicesData";
 
 const Services = () => {
   return (
@@ -63,7 +25,8 @@ const Services = () => {
         transform your digital vision into a reality. */}
       </p>
       {/* <i className="fa-solid fa-mobile-screen text-8xl"></i> */}
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* <div className=""> */}
         {ServicesData.map((service, index) => (
           <ServiceCard key={index} {...service} />
         ))}
@@ -72,14 +35,21 @@ const Services = () => {
   );
 };
 
-function ServiceCard({ title, description, icon }) {
+function ServiceCard({ title, shortDescription, icon }) {
+  // const [hovered, setHovered] = React.useState(false);
   return (
-    <div className="flex flex-col gap-4 borde rounded-lg p-4 bg-[#212121]">
+    <div className="col-star relative flex flex-col gap-4 rounded-lg borde p-4 bg-[#212121] overflow-hidde group hover:bg-gradient-to-r to-[#00f1ffa6] from-[#7932d9a6] cursor-pointer">
       <div className="flex items-center gap-4">
         <i className={`fa-solid ${icon} text-3xl text-[#00f1ff]`}></i>
         <h3 className="text-xl font-bold">{title}</h3>
       </div>
-      <p>{description}</p>
+      <p>{shortDescription}</p>
+      <p className="group-hover:underline relative w-max">
+        <span className="ps-4 group-hover:ps-0 group-hover:pe-2 transition-all duration-300">
+          View More
+        </span>
+        <i class="fa-solid fa-chevron-right absolute left-0 group-hover:left-full transition-all duration-300 top-1/2 -translate-y-1/2"></i>
+      </p>
     </div>
   );
 }
