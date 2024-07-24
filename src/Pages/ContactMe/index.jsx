@@ -4,53 +4,63 @@ import { useOutletContext } from "react-router-dom";
 function ContactMe() {
   const { navBarHeight } = useOutletContext();
   return (
-    <div
-      className="flex justify-between container mx-auto"
-      style={{ paddingTop: `${navBarHeight + 10}px` }}
-    >
-      <div className="w-1/3">
-        <h2>Contact me</h2>
-        <p>
-          Have questions, need assistance, or want to collaborate? Reach out to
-          us using our convenient contact form. We're eager to connect and
-          discuss your needs. Simply fill out the form below, and we'll get back
-          to you promptly.
-        </p>
-      </div>
-      <div className="w-1/3">
-        <form className="flex flex-col gap-3">
-          <h2 className=" text-center">Tell me about your project</h2>
-          <InputGroup
-            label="Name"
-            type="text"
-            placeholder="Enter your name"
-            required
-          />
-          <InputGroup
-            label="Email"
-            type="email"
-            placeholder="Enter your email"
-            required
-          />
-          <InputGroup
-            label="Phone"
-            type="text"
-            placeholder="Enter your phone number"
-          />
-          <InputGroup
-            label="Company"
-            type="text"
-            placeholder="Enter your company name"
-          />
-          {/* <InputGroup
+    <>
+      <h1
+        className=" bg-gradient-to-l from-[#7932d9] to-[#00f2ff98] text-center text-5xl font-bold mb-8"
+        style={{ padding: `${navBarHeight}px 0` }}
+      >
+        Contact Me Today
+      </h1>
+      <div className="flex justify-between container mx-auto">
+        <div className="w-1/3">
+          <h2>I am here to help</h2>
+          <p>
+            Do you have a project in mind or need assistance with your existing
+            online presence? I'm here to help. Whether you're looking for
+            website design, SEO, or digital marketing strategies, I can provide
+            tailored solutions to meet your specific needs.
+          </p>
+          <p>
+            Feel free to reach out with any questions or inquiries you may have.
+            I'm eager to discuss your project and explore how I can help you
+            achieve your goals.
+          </p>
+        </div>
+        <div className="w-1/3">
+          <form className="flex flex-col gap-3">
+            <h2 className=" text-center">Tell me about your project</h2>
+            <InputGroup
+              label="Name"
+              type="text"
+              placeholder="Enter your name"
+              required
+            />
+            <InputGroup
+              label="Email"
+              type="email"
+              placeholder="Enter your email"
+              required
+            />
+            <InputGroup
+              label="Phone"
+              type="text"
+              placeholder="Enter your phone number"
+            />
+            <InputGroup
+              label="Company"
+              type="text"
+              placeholder="Enter your company name"
+            />
+            {/* <InputGroup
             label="Message"
             type="text"
             placeholder="Enter your message"
             required
           /> */}
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
