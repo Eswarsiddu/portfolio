@@ -11,10 +11,10 @@ function ContactMe() {
       <div className="w-1/3">
         <h2>Contact me</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-          porro tempora, rerum delectus recusandae fugiat quos deleniti cumque
-          deserunt asperiores quidem repudiandae! Voluptate, libero. Quibusdam,
-          est? Incidunt quis enim aliquid!
+          Have questions, need assistance, or want to collaborate? Reach out to
+          us using our convenient contact form. We're eager to connect and
+          discuss your needs. Simply fill out the form below, and we'll get back
+          to you promptly.
         </p>
       </div>
       <div className="w-1/3">

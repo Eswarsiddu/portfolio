@@ -10,17 +10,34 @@ const PageLayout = () => {
   const footerRef = useRef(null);
   const [navBarHeight, setNavBarHeight] = useState(0);
   const [footerHeight, setFooterHeight] = useState(0);
-  const mainMinHeight = `calc(100vh - ${navBarHeight + footerHeight}px)`;
+  const mainMinHeight = `calc(100vh - ${footerHeight}px)`;
+  const [isScrooled, setIsScrolled] = useState(false);
+
+  useLayoutEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 5) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <NavBar
         navRef={navRef}
         navBarHeight={navBarHeight}
         setNavBarHeight={setNavBarHeight}
+        isScrooled={isScrooled}
       />
       {/* <Outlet /> */}
       <main
+        // className=""
         style={{
+          // paddingTop: navBarHeight,
           minHeight: mainMinHeight,
         }}
       >

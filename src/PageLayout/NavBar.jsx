@@ -36,7 +36,7 @@ export const NavBarElements = [
   },
 ];
 
-function NavBar({ navRef, navBarHeight, setNavBarHeight }) {
+function NavBar({ navRef, navBarHeight, setNavBarHeight, isScrooled }) {
   useLayoutEffect(() => {
     setNavBarHeight(navRef.current.clientHeight);
   });
@@ -44,7 +44,15 @@ function NavBar({ navRef, navBarHeight, setNavBarHeight }) {
   return (
     <>
       {/* 3d426b */}
-      <header className=" sticky top-0 w-full z-20 bg-[#212121]" ref={navRef}>
+      <header
+        className={
+          " fixed top-0 w-full z-20 " +
+          (isScrooled
+            ? "bg-[#212121]"
+            : " bg-transparent bg-gradient-to- from-[#7932d9] to-[#00f2ff98]")
+        }
+        ref={navRef}
+      >
         <nav className="flex py-2 px-2 md:px-4 items-center relative">
           <NavLogo />
           <div className="h-full flex-grow flex">

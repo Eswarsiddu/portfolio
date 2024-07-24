@@ -1,22 +1,31 @@
 import React from "react";
 import { ServicesData } from "../../InfoDatas/ServicesData";
+import { useOutletContext } from "react-router-dom";
 
 const Services = () => {
+  const { navBarHeight } = useOutletContext();
   return (
     <>
-      <h1 className=" text-center w-max mx-auto font-extrabold text-4xl mt-2 mb-4 text-transparent bg-clip-text bg-gradient-to-l from-[#7932d9] to-[#00f2ff98]">
+      {/* <h1 className=" text-center w-max mx-auto font-extrabold text-4xl mt-2 mb-4 text-transparent bg-clip-text bg-gradient-to-l from-[#7932d9] to-[#00f2ff98]">
         Services
-      </h1>
-      <p className=" container mx-auto text-xl mb-10">
-        Unleash your digital potential with our expert website and mobile app
-        development services. We craft innovative, user-centric solutions that
-        drive results. From concept to launch, we deliver exceptional digital
-        experiences tailored to your brand.
-      </p>
-      <div className="w-full container mx-auto flex flex-col mb-16">
+      </h1> */}
+      <div
+        className="bg-gradient-to-l from-[#7932d9] to-[#00f2ff98]"
+        style={{
+          paddingTop: `${navBarHeight}px`,
+        }}
+      >
+        <p className=" container mx-auto text-2xl py-16 md:px-6 px-2 xs:px-0 ">
+          Unleash your digital potential with our expert website and mobile app
+          development services. We craft innovative, user-centric solutions that
+          drive results. From concept to launch, we deliver exceptional digital
+          experiences tailored to your brand.
+        </p>
+      </div>
+      <div className="w-full container mx-auto flex flex-col pt-16 lg:pt-0 mb-8 md:px-6 px-2 xs:px-0">
         {ServicesData.map((service, index) => {
           return (
-            <section className=" py-8 border-b">
+            <section className=" pb-8 mb-8 border-b border-[rgba(255,255,255,0.25)]">
               <div className="flex items-center gap-4 w-full lg:hidden">
                 <i
                   className={`fa-solid ${service.icon} text-3xl text-[#00f1ff]`}
@@ -44,7 +53,7 @@ const Services = () => {
                     })}
                   </div>
                 </div>
-                <div className="w-full lg:w-4/12">
+                <div className=" w-full md:w-2/3 lg:w-4/12">
                   <img
                     className="w-full"
                     alt={service.title + " Visual Picture"}
@@ -56,6 +65,23 @@ const Services = () => {
           );
         })}
       </div>
+      <p className="container mx-auto md:px-6 px-2 xs:px-0 text-lg">
+        We are a full-service digital agency dedicated to creating exceptional
+        online experiences. From crafting stunning websites and engaging mobile
+        apps to developing robust e-commerce platforms and customized digital
+        solutions, we offer a comprehensive range of services to help businesses
+        thrive. Our expertise extends to optimizing online visibility through
+        SEO and ensuring the ongoing health of digital assets with our
+        maintenance and support services.
+      </p>
+      <p className="container mx-auto md:px-6 px-2 xs:px-0 mt-8 mb-16 text-lg">
+        We combine design excellence, strategic thinking, and technical
+        expertise to deliver tangible results. Our focus is on understanding our
+        clients' unique needs and goals, and then tailoring our solutions
+        accordingly. Whether you're looking to establish a strong online
+        presence, drive sales, or enhance user engagement, we have the skills
+        and experience to help you succeed.
+      </p>
     </>
   );
 };

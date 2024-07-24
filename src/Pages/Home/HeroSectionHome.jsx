@@ -6,9 +6,10 @@ function HeroSection({ NavBarHeight }) {
 
   return (
     <section
-      className=" container mx-auto relative animate-bgChang flex flex-col pb-4"
+      className=" container mx-auto relative animate-bgChang flex flex-col pb-4 h-screen"
       style={{
-        height: `${HeroSectionHeight}px`,
+        paddingTop: `${NavBarHeight}px`,
+        // height: `${HeroSectionHeight}px`,
       }}
     >
       <div className=" px-2 md:px-6 mx-auto flex flex-col lg:flex-row justify-start md:justify-center gap-4 lg:justify-between items-center flex-grow ">
