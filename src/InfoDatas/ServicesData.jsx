@@ -1,11 +1,16 @@
-import webDev from "/images/services/website.png";
-import mobile2 from "/images/services/5794866.png";
-import eCommerce from "/images/services/handDrawn.png";
-// import seo from "/images/services/seo-analytics-team-concept-illustration.png";
-import seo from "/images/services/WavyBus.png";
-import custom from "/images/services/search.png";
-// import maintainance from "/images/services/construction-concept-illustration.png";
-import maintainance from "/images/services/3819454.png";
+// import webDev from "/images/services/website.png";
+// import mobile2 from "/images/services/5794866.png";
+// import eCommerce from "/images/services/handDrawn.png";
+// import seo from "/images/services/WavyBus.png";
+// import custom from "/images/services/search.png";
+// import maintainance from "/images/services/3819454.png";
+
+import webDev from "/images/services/website.webp";
+import mobile2 from "/images/services/5794866.webp";
+import eCommerce from "/images/services/handDrawn.webp";
+import seo from "/images/services/WavyBus.webp";
+import custom from "/images/services/search.webp";
+import maintainance from "/images/services/3819454.webp";
 
 export const Services = {
   WEB_DEVELOPMENT: "Web Development",
@@ -70,9 +75,12 @@ export const ServicesData = [
     id: Services.CUSTOM_SOLUTIONS.split(" ").join("-").toLowerCase(),
     image: custom,
     descriptions: [
-      "We create custom web and mobile applications that are tailored to your unique needs and goals.",
-      "Our custom solutions are designed to help your business stand out from the competition and achieve your objectives.",
-      "From concept to launch, we deliver exceptional digital experiences that drive results.",
+      // "We create custom web and mobile applications that are tailored to your unique needs and goals.",
+      // "Our custom solutions are designed to help your business stand out from the competition and achieve your objectives.",
+      // "From concept to launch, we deliver exceptional digital experiences that drive results.",
+      "Crafting Bespoke Digital Solutions. We specialize in creating custom web and mobile applications that perfectly align with your business objectives. Our solutions are tailored to your unique needs, ensuring they address your specific challenges and capitalize on your opportunities.",
+      "Driving Results Through Innovation. Our custom applications are designed to set you apart from the competition. By delivering exceptional user experiences and streamlining processes, we empower your business to achieve its goals and surpass expectations.",
+      "Your Vision, Our Expertise. From the initial concept to the final product, we collaborate closely with you to bring your ideas to life. Our dedicated team leverages cutting-edge technology and industry best practices to deliver exceptional digital experiences that drive results.",
     ],
     shortDescription:
       "We create custom web and mobile applications that are tailored to your unique needs and goals.",
@@ -83,9 +91,12 @@ export const ServicesData = [
     id: Services.SEO_SERVICES.split(" ").join("-").toLowerCase(),
     image: seo,
     descriptions: [
-      "We offer comprehensive SEO services to help your website rank higher in search engine results and attract more visitors.",
-      "Our SEO services are designed to increase your online visibility and drive organic traffic to your site.",
-      "From keyword research to on-page optimization, we help you improve your search engine rankings and grow your business.",
+      // "We offer comprehensive SEO services to help your website rank higher in search engine results and attract more visitors.",
+      // "Our SEO services are designed to increase your online visibility and drive organic traffic to your site.",
+      // "From keyword research to on-page optimization, we help you improve your search engine rankings and grow your business.",
+      "Boost Your Online Visibility. Our comprehensive SEO services are designed to elevate your website's ranking in search engine results. By increasing your visibility, we help you attract a larger audience and generate more organic traffic.",
+      "Drive Organic Traffic and Growth. We implement strategic SEO tactics to bring qualified visitors to your website. By optimizing your online presence, we help you stand out from the competition and achieve sustainable business growth.",
+      "Expert SEO Optimization. From in-depth keyword research to meticulous on-page optimization, our team provides expert guidance to improve your search engine rankings. We'll help you create content that resonates with your target audience and drives results.",
     ],
     shortDescription:
       "We offer comprehensive SEO services to help your website rank higher in search engine results and attract more visitors.",
@@ -96,9 +107,12 @@ export const ServicesData = [
     id: Services.MAINTENANCE_AND_SUPPORT.split(" ").join("-").toLowerCase(),
     image: maintainance,
     descriptions: [
-      "We provide ongoing maintenance and support services to keep your website or app running smoothly and securely.",
-      "Our maintenance and support services are designed to help you maintain your digital assets and protect your investment.",
-      "From software updates to security patches, we help you keep your website or app up-to-date and secure.",
+      // "We provide ongoing maintenance and support services to keep your website or app running smoothly and securely.",
+      // "Our maintenance and support services are designed to help you maintain your digital assets and protect your investment.",
+      // "From software updates to security patches, we help you keep your website or app up-to-date and secure.",
+      `Keep Your Digital Assets Thriving. Our dedicated maintenance and support services ensure your website or app operates seamlessly and securely. We offer ongoing care to preserve the health and performance of your digital investment."Protect Your Investment with Our Support. By entrusting us with your website or app maintenance, you're safeguarding your digital assets. Our comprehensive support services minimize downtime, enhance security, and protect your business from potential threats.`,
+      `Protect Your Investment with Our Support. By entrusting us with your website or app maintenance, you're safeguarding your digital assets. Our comprehensive support services minimize downtime, enhance security, and protect your business from potential threats.`,
+      `Stay Ahead with Regular Updates. We keep your website or app up-to-date with the latest software and security patches. Our proactive approach helps maintain optimal performance, protects against vulnerabilities, and ensures your digital platform continues to deliver exceptional user experiences.`,
     ],
     shortDescription:
       "We provide ongoing maintenance and support services to keep your website or app running smoothly and securely.",

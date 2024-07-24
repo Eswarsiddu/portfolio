@@ -13,20 +13,20 @@ const Services = () => {
         drive results. From concept to launch, we deliver exceptional digital
         experiences tailored to your brand.
       </p>
-      <div className="w-full container mx-auto px-4 md:px-6 flex flex-col gap-8 mb-16">
+      <div className="w-full container mx-auto px-4 md:px-6 flex flex-col gap-12 mb-16">
         {ServicesData.map((service, index) => {
           return (
             <div
               key={index}
-              className=" flex w-full justify-between bg-[#4f0596"
+              className=" flex w-full justify-between bg-[#4f0596 items-center"
             >
-              <div className="w-6/12">
+              <div className="w-8/12">
                 <div className="flex flex-col justify-center gap-6 h-full mt-6">
                   <div className="flex items-center gap-4 w-full">
                     <i
                       className={`fa-solid ${service.icon} text-3xl text-[#00f1ff]`}
                     ></i>
-                    <h3 className="text-2xl font-bold">{service.title}</h3>
+                    <h2 className="text-2xl font-bold">{service.title}</h2>
                   </div>
                   {service.descriptions.map((description, index) => {
                     return (
@@ -38,7 +38,11 @@ const Services = () => {
                 </div>
               </div>
               <div className="w-4/12">
-                <img className="w-full" src={service.image} />
+                <img
+                  className="w-full"
+                  alt={service.title + " Visual Picture"}
+                  src={service.image}
+                />
               </div>
             </div>
           );
