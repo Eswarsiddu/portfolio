@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { RouteNames } from "../../Routes";
+import Button from "../../CustomComponents/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function Projects() {
+  const navigate = useNavigate();
   return (
     <div className="my-6 ">
       {/* <p>Projects</p> */}
@@ -40,7 +43,7 @@ export default function Projects() {
             Force aims to be your trusted partner for complete peace of mind.
           </p> */}
           <div className="flex gap-4">
-            <a
+            {/* <a
               className="p-2 bg-[#7932d9] rounded text-white hover:bg-[#6925c2] font-medium"
               href="https://www.spearsecurityforce.in/"
               target="_blank"
@@ -52,7 +55,23 @@ export default function Projects() {
               className="p-2 bg-red-500 rounded text-white hover:bg-red-600 font-medium"
             >
               Read More
-            </Link>
+            </Link> */}
+            <Button
+              onClick={() => {
+                window.open("https://www.spearsecurityforce.in/");
+              }}
+            >
+              <span className="text-sm xs:text-base font-bold">Visit site</span>
+            </Button>
+
+            <Button
+              secondary
+              onClick={() => {
+                navigate(RouteNames.SPEAR_SECURITY_FORCE);
+              }}
+            >
+              <span className="text-sm xs:text-base font-bold">Read More</span>
+            </Button>
           </div>
         </div>
       </div>

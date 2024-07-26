@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import HeroSection from "./HeroSectionHome";
 import { useOutletContext } from "react-router-dom";
 // import Capabilities from "./Capabilities";
-// import GetInTouch from "./GetInTouch";
+import GetInTouch from "./GetInTouch";
 import Projects from "./Projects";
 import Experience from "./Experience";
 import AboutMe from "./AboutMe";
@@ -22,6 +22,7 @@ function Home() {
       <Services NavBarHeight={navBarHeight ?? 0} />
       {/* <Experience NavBarHeight={navBarHeight ?? 0} /> */}
       <Projects NavBarHeight={navBarHeight ?? 0} />
+      <GetInTouch />
 
       {/* { */}
 

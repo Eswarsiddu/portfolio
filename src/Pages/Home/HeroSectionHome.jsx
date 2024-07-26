@@ -1,5 +1,6 @@
 import Lottie from "lottie-react";
 import GIF from "../../Assets/2TubWAO9Je.json";
+import Button from "../../CustomComponents/Button";
 
 function HeroSection({ NavBarHeight }) {
   const HeroSectionHeight = window.innerHeight - NavBarHeight;
@@ -22,9 +23,9 @@ function HeroSection({ NavBarHeight }) {
               Hi, I'm <span className="font-Playwrite font-bold">ESWAR</span>
             </span>
           </div>
-          <p className=" text-lg xs:text-3xl font-GaMaamli">
+          <p className=" text-lg xs:text-3xl font-GaMaaml font-Playwrit">
             Your{" "}
-            <span className="text-[#00f1ff] text-2xl xs:text-4xl">
+            <span className="text-[#00f1ff] text-2xl xs:text-4xl font-GaMaamli font-Playwrit">
               Website & App
             </span>{" "}
             Superhero
@@ -35,10 +36,19 @@ function HeroSection({ NavBarHeight }) {
             shine.
           </p>
           <div className="flex gap-4">
-            <button className="py-2 px-4 bg-[#7932d9] rounded-md group hover:bg-[#6925c2] text-sm xs:text-base font-bold relative">
-              <span>Contact Me</span>
+            {/* <button className="py-2 px-4 bg-[#7932d9] rounded-md group hover:bg-[#6925c2] text-sm xs:text-base font-bold relative">
+              <span className="text-sm xs:text-base font-bold">Contact Me</span>
               <span className="block absolute w-full h-full rounded-md left-0 top-0 group-hover:left-1 group-hover:top-1 -z-10 transition-all duration-100 ease-in group-hover:bg-[#00f1ff]"></span>
-            </button>
+            </button> */}
+            <Button>
+              <span className="text-sm xs:text-base font-bold">Contact Me</span>
+            </Button>
+
+            <Button secondary>
+              <span className="text-sm xs:text-base font-bold">
+                View My Work
+              </span>
+            </Button>
           </div>
         </div>
         <Lottie
