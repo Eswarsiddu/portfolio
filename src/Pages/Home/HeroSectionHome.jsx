@@ -1,15 +1,21 @@
 import Lottie from "lottie-react";
 import GIF from "../../Assets/2TubWAO9Je.json";
 import Button from "../../CustomComponents/Button";
+import { useNavigate } from "react-router-dom";
+import { RouteNames } from "../../Routes";
 
 function HeroSection({ NavBarHeight }) {
-  const HeroSectionHeight = window.innerHeight - NavBarHeight;
+  // const HeroSectionHeight = window.innerHeight - NavBarHeight;
+  const navigate = useNavigate();
 
   return (
     <section
-      className=" container mx-auto relative animate-bgChang flex flex-col pb-4 h-screen"
+      className=" container mx-auto relative animate-bgChang flex flex-col pb-4"
       style={{
-        paddingTop: `${NavBarHeight}px`,
+        // height: "100vh",
+        height: "100svh",
+        // height: "100vh",
+        // paddingTop: `${NavBarHeight}px`,
         // height: `${HeroSectionHeight}px`,
       }}
     >
@@ -40,11 +46,20 @@ function HeroSection({ NavBarHeight }) {
               <span className="text-sm xs:text-base font-bold">Contact Me</span>
               <span className="block absolute w-full h-full rounded-md left-0 top-0 group-hover:left-1 group-hover:top-1 -z-10 transition-all duration-100 ease-in group-hover:bg-[#00f1ff]"></span>
             </button> */}
-            <Button>
+            <Button
+              onClick={() => {
+                navigate(RouteNames.CONTACT_ME);
+              }}
+            >
               <span className="text-sm xs:text-base font-bold">Contact Me</span>
             </Button>
 
-            <Button secondary>
+            <Button
+              secondary
+              onClick={() => {
+                navigate(RouteNames.PROJECTS);
+              }}
+            >
               <span className="text-sm xs:text-base font-bold">
                 View My Work
               </span>

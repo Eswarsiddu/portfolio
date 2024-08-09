@@ -14,6 +14,7 @@ function Home() {
   // const navBarHeight = NavRef.current?.offsetHeight;
   useEffect(() => {
     document.title = "Siddu Eswar | Portfolio";
+    window.scrollTo(0, 0);
   }, []);
   return (
     <>

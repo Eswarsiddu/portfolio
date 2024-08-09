@@ -5,5 +5,5 @@ export const RouteNames = {
   SERVICES: "/services",
   CONTACT_ME: "/contact-me",
   SPEAR_SECURITY_FORCE: "/projects/spear-security-force",
-  ABOUT_ME: "/about-me",
+  // ABOUT_ME: "/about-me",
 };

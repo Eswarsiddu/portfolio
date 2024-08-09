@@ -1,5 +1,7 @@
 import React from "react";
 import { ServicesData } from "../../InfoDatas/ServicesData";
+import { Link, useNavigate } from "react-router-dom";
+import { RouteNames } from "../../Routes";
 
 const Services = () => {
   return (
@@ -36,9 +38,21 @@ const Services = () => {
 };
 
 function ServiceCard({ title, shortDescription, icon }) {
+  const navigate = useNavigate();
   // const [hovered, setHovered] = React.useState(false);
   return (
-    <div className="col-star relative flex flex-col gap-4 rounded-lg borde p-4 bg-[#212121] overflow-hidde group hover:bg-gradient-to-r to-[#00f1ffa6] from-[#7932d9a6] cursor-pointer">
+    <div
+      tabIndex={0}
+      className="col-star relative flex flex-col gap-4 rounded-lg borde p-4 bg-[#212121] overflow-hidde group hover:bg-gradient-to-r to-[#00f1ffa6] from-[#7932d9a6] cursor-pointer"
+      // to={RouteNames.SERVICES + "#" + title.split(" ").join("-")}
+      // to={RouteNames.SERVICES}
+      onClick={() => {
+        navigate(RouteNames.SERVICES, {
+          state: { title },
+          replace: false,
+        });
+      }}
+    >
       <div className="flex items-center gap-4">
         <i className={`fa-solid ${icon} text-3xl text-[#00f1ff]`}></i>
         <h3 className="text-xl font-bold">{title}</h3>

@@ -10,7 +10,8 @@ export default function Projects() {
       {/* <p>Projects</p> */}
       <h2 className="my-10 text-3xl text-white text-center font-bold">
         {/* Projects */}
-        PROJECTS
+        {/* PROJECTS */}
+        MY WORKS
       </h2>
       <div className="container mx-auto px-4 flex flex-row-reverse gap-16 w-full">
         <div className="w-6/12 flex-shrink-0">

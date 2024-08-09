@@ -10,7 +10,7 @@ const PageLayout = () => {
   const footerRef = useRef(null);
   const [navBarHeight, setNavBarHeight] = useState(0);
   const [footerHeight, setFooterHeight] = useState(0);
-  const mainMinHeight = `calc(100vh - ${footerHeight}px)`;
+  // const mainMinHeight = `calc(100vh - ${footerHeight}px)`;
   const [isScrooled, setIsScrolled] = useState(false);
 
   useLayoutEffect(() => {
@@ -36,10 +36,12 @@ const PageLayout = () => {
       {/* <Outlet /> */}
       <main
         // className=""
-        style={{
-          // paddingTop: navBarHeight,
-          minHeight: mainMinHeight,
-        }}
+        style={
+          {
+            // paddingTop: navBarHeight,
+            // minHeight: mainMinHeight,
+          }
+        }
       >
         {/* <Outlet /> */}
         <Outlet context={{ navBarHeight }} />

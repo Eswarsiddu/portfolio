@@ -18,10 +18,10 @@ export const NavBarElements = [
     name: "Services",
     to: RouteNames.SERVICES,
   },
-  {
-    name: "About me",
-    to: RouteNames.ABOUT_ME,
-  },
+  // {
+  //   name: "About me",
+  //   to: RouteNames.ABOUT_ME,
+  // },
   {
     name: "My Work",
     to: RouteNames.PROJECTS,
@@ -37,6 +37,7 @@ export const NavBarElements = [
 ];
 
 function NavBar({ navRef, navBarHeight, setNavBarHeight, isScrooled }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   useLayoutEffect(() => {
     setNavBarHeight(navRef.current.clientHeight);
   });
@@ -47,7 +48,7 @@ function NavBar({ navRef, navBarHeight, setNavBarHeight, isScrooled }) {
       <header
         className={
           " fixed top-0 w-full z-20 " +
-          (isScrooled
+          (isScrooled || isMenuOpen
             ? "bg-[#212121]"
             : " bg-transparent bg-gradient-to- from-[#7932d9] to-[#00f2ff98]")
         }
@@ -66,7 +67,11 @@ function NavBar({ navRef, navBarHeight, setNavBarHeight, isScrooled }) {
                 </li>
               ))}
             </ul>
-            <MenuItems NavElements={NavBarElements} />
+            <MenuItems
+              NavElements={NavBarElements}
+              isOpen={isMenuOpen}
+              setIsOpen={setIsMenuOpen}
+            />
             {/* <div className="block md:hidden">
               <MenuIcon />
             </div> */}
@@ -77,10 +82,8 @@ function NavBar({ navRef, navBarHeight, setNavBarHeight, isScrooled }) {
   );
 }
 
-function MenuItems({ NavElements }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [revealedElements, setRevealedElements] = useState([]);
-  const [isRevealing, setIsRevealing] = useState(false);
+function MenuItems({ NavElements, isOpen, setIsOpen }) {
+  // const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="flex md:hidden items-center">

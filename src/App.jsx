@@ -8,7 +8,7 @@ import SpearSecurityForce from "./Pages/Projects/SpearSecurityForce";
 import ColourPalletChecker from "./Pages/ColourPalletChecker";
 import PageLayout from "./PageLayout";
 import AboutMe from "./Pages/AboutMe";
-import Services from "./Pages/Services";
+import ServicesPage from "./Pages/Services";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route path={RouteNames.PROJECTS} element={<Projects />} />
           <Route path={RouteNames.ABOUT_ME} element={<AboutMe />} />
           <Route path={RouteNames.BLOGS} element={<Blogs />} />
-          <Route path={RouteNames.SERVICES} element={<Services />} />
+          <Route path={RouteNames.SERVICES} element={<ServicesPage />} />
           <Route path={RouteNames.CONTACT_ME} element={<ContactMe />} />
           <Route
             path={RouteNames.SPEAR_SECURITY_FORCE}
