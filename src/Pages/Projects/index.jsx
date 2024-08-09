@@ -20,7 +20,7 @@ function Projects() {
         className=" bg-gradient-to-l from-[#7932d9] to-[#00f2ff98] text-center text-5xl font-bold mb-8"
         style={{ padding: `${navBarHeight}px 0` }}
       >
-        My Work
+        <span className="block translate-y-1/2">My Work</span>
       </h1>
     </>
   );
