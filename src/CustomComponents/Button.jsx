@@ -1,14 +1,15 @@
 import React from "react";
 
-const Button = ({ children, onClick, secondary = false }) => {
+const Button = ({ children, onClick, secondary = false, disabled }) => {
   return (
     <button
+      disabled={disabled}
       className={
         "py-2 px-4 rounded-md group relative " +
         (secondary
-          ? "bg-red-500 hover:bg-red-600"
+          ? "bg-red-500 hover:bg-red-600 disabled:bg-red-300 text-white disabled:cursor-not-allowed"
           : // "bg-[#54e8f0] hover:bg-[#00f1ff] text-[#181818]"
-            "bg-[#7932d9] hover:bg-[#6925c2]")
+            "bg-[#7932d9] hover:bg-[#6925c2] disabled:bg-[#b3a0f0] text-white disabled:cursor-not-allowed")
       }
       onClick={onClick}
     >

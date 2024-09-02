@@ -47,7 +47,7 @@ const Footer = ({ footerRef, footerHeight, setFooterHeight }) => {
       ref={footerRef}
       className=" background-patter bg-gradient-to-r bg-[#7932d936 from-[#00f1ff36] to-[#7932d936]"
     >
-      <div className=" flex justify-between flex-col gap-6 md:gap-0 md:flex-row container mx-auto px-4 md:px-6 border-b border-white border-opacity-30 py-6">
+      <div className=" flex justify-between flex-col gap-6 md:gap-0 md:flex-row container mx-auto md:px-6 border-b border-white border-opacity-30 py-6">
         <div>
           <NavLogo />
         </div>
