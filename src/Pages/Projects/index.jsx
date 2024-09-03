@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
+import { ProjectCard } from "../Home/Projects";
+import { RouteNames } from "../../Routes";
 
 function Projects() {
   const { navBarHeight } = useOutletContext();
@@ -22,6 +24,17 @@ function Projects() {
       >
         <span className="block translate-y-1/2">My Work</span>
       </h1>
+      <div className="py-6">
+        <ProjectCard
+          title={"Spear Security Force"}
+          shortDescription={
+            "A 5-page professional website showcasing their services and contact information to grow their business, featuring enhanced online availability and accessibility to reach and attract more clients effectively."
+          }
+          image={"/images/spearSecurityScreenshot.jpg"}
+          siteLink={"https://www.spearsecurityforce.in/"}
+          readMoreLink={RouteNames.SPEAR_SECURITY_FORCE}
+        />
+      </div>
     </>
   );
 }

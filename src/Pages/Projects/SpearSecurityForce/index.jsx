@@ -9,7 +9,12 @@ const SpearSecurityForce = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className=" text-white container w-full mx-auto px-4 md:px-8 mt-6">
+    <div
+      className=" text-white container w-full mx-auto px-4 md:px-8 mt-6"
+      style={{
+        paddingTop: `${navBarHeight}px`,
+      }}
+    >
       <div className="flex justify-between items-center flex-col md:flex-row gap-4 md:gap-0">
         <div className="w-full md:w-4/12 flex flex-col gap-4">
           <h2 className=" text-3xl font-bold text-[#06bca7] tex-red-500">
