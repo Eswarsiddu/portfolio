@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /projects
+Disallow: /projects/spear-security-force
+Allow: /services
+Allow: /contact-me
