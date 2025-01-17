@@ -22,6 +22,13 @@ const FooterData = [
     }),
   },
   {
+    title: "Learn More",
+    elements: [
+      { name: "Terms and Conditions", to: RouteNames.TERMS_AND_CONDITIONS },
+      { name: "Privacy Policy", to: RouteNames.PRIVACY_POLICY },
+    ],
+  },
+  {
     title: "Contact",
     elements: [
       {
@@ -47,7 +54,7 @@ const Footer = ({ footerRef, footerHeight, setFooterHeight }) => {
       ref={footerRef}
       className=" background-patter bg-gradient-to-r bg-[#7932d936 from-[#00f1ff36] to-[#7932d936]"
     >
-      <div className=" flex justify-between flex-col gap-6 md:gap-0 md:flex-row container mx-auto md:px-6 border-b border-white border-opacity-30 py-6">
+      <div className=" flex justify-between flex-col gap-6 md:gap-0 md:flex-row container mx-auto md:px-6 border-b border-white border-opacity-30 py-6 flex-wrap">
         <div>
           <NavLogo />
         </div>

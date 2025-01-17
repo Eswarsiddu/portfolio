@@ -18,10 +18,10 @@ export const NavBarElements = [
     name: "Services",
     to: RouteNames.SERVICES,
   },
-  // {
-  //   name: "About me",
-  //   to: RouteNames.ABOUT_ME,
-  // },
+  {
+    name: "About me",
+    to: RouteNames.ABOUT_ME,
+  },
   {
     name: "My Work",
     to: RouteNames.PROJECTS,

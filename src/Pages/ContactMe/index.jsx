@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import { ServicesData } from "../../InfoDatas/ServicesData";
 import Button from "../../CustomComponents/Button";
@@ -18,6 +18,11 @@ function ContactMe() {
   const companyRef = React.useRef(null);
   const purposeRef = React.useRef(null);
   const servicesRef = React.useRef(null);
+
+  useEffect(() => {
+    document.title = "Siddu Eswar | Contact Me";
+    window.scrollTo(0, 0);
+  }, []);
 
   const formSubmitted = (e) => {
     e.preventDefault();

@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 
 export default function Projects() {
   return (
-    <div className="my-6 ">
+    <div className="my-12 space-y-8 ">
       {/* <p>Projects</p> */}
-      <h2 className="my-10 text-3xl text-white text-center font-bold">
+      <h2 className=" text-3xl text-white text-center font-bold">
         {/* Projects */}
         {/* PROJECTS */}
         MY WORKS
@@ -15,11 +15,20 @@ export default function Projects() {
       <ProjectCard
         title={"Spear Security Force"}
         shortDescription={
-          "A 5-page professional website showcasing their services and contact information to grow their business, featuring enhanced online availability and accessibility to reach and attract more clients effectively."
+          "A professional 5-page website that highlights their security services, designed to enhance online presence and accessibility, enabling them to effectively reach and attract more clients."
         }
         image={"/images/spearSecurityScreenshot.jpg"}
-        siteLink={"https://www.spearsecurityforce.in/"}
+        // siteLink={"https://www.spearsecurityforce.in/"}
         readMoreLink={RouteNames.SPEAR_SECURITY_FORCE}
+      />
+      <ProjectCard
+        title={"Smart Techs HR Services"}
+        shortDescription={
+          "A professional website focused on showcasing HR services, designed to strengthen business growth through improved online presence and accessibility, making it easier to connect with potential clients."
+        }
+        image={"/images/smartTechsScreenshot.png"}
+        // siteLink={"https://www.spearsecurityforce.in/"}
+        readMoreLink={RouteNames.SMART_TECHS_HR_SERVICES}
       />
       {/* <div className="container mx-auto px-4 flex md:flex-row-reverse flex-col gap-6 md:gap-16 w-full">
         <div className=" text-white flex flex-col justify-center bg-red gap-4 flex-grow">
@@ -89,7 +98,7 @@ export function ProjectCard({
 }) {
   const navigate = useNavigate();
   return (
-    <div className="container mx-auto px-4 flex md:flex-row-reverse flex-col gap-6 md:gap-16 w-full">
+    <div className="container mx-auto px-4 flex md:flex-row-reverse items-center flex-col gap-6 md:gap-16 w-full">
       <div className=" text-white flex flex-col justify-center bg-red gap-4 flex-grow">
         <h3 className="text-2xl">{title}</h3>
         <div className="md:hidden flex-shrink-0">
@@ -107,13 +116,15 @@ export function ProjectCard({
         Force aims to be your trusted partner for complete peace of mind.
       </p> */}
         <div className="flex gap-4">
-          <Button
-            onClick={() => {
-              window.open(siteLink);
-            }}
-          >
-            <span className="text-sm xs:text-base font-bold">Visit site</span>
-          </Button>
+          {siteLink && (
+            <Button
+              onClick={() => {
+                window.open(siteLink);
+              }}
+            >
+              <span className="text-sm xs:text-base font-bold">Visit site</span>
+            </Button>
+          )}
 
           <Button
             secondary
@@ -125,7 +136,7 @@ export function ProjectCard({
           </Button>
         </div>
       </div>
-      <div className="hidden md:block w-6/12 flex-shrink-0">
+      <div className="hidden md:block w-4/12 flex-shrink-0">
         <a href={siteLink} target="_blank">
           <img src={image} alt={title} className="w-full" />
         </a>

@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-("react");
-import { useOutletContext } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 import LandingPage from "/images/spearSecurityScreenshot.jpg";
 
 const SpearSecurityForce = () => {
   const { navBarHeight } = useOutletContext();
+  const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -15,6 +15,30 @@ const SpearSecurityForce = () => {
         paddingTop: `${navBarHeight}px`,
       }}
     >
+      {/* back button */}
+      <button
+        onClick={() => {
+          console.log("referrer", document.referrer, !document.referrer);
+          // return;
+          if (!document.referrer) {
+            navigate("/"); // Replace '/' with your homepage URL if needed
+            // window.location.href = "/"; // Replace '/' with your homepage URL if needed
+            return;
+          }
+          if (document.referrer.indexOf(window.location.hostname) === -1) {
+            // If the referrer is from a different domain, redirect to home
+            navigate("/");
+            // window.location.href = "/"; // Replace '/' with your homepage URL if needed
+          } else {
+            // Otherwise, `go` back to the previous page in history
+            window.history.back();
+          }
+        }}
+        className="text-[#06bca7] bg-transparent px-4 py-2 rounded"
+      >
+        <span> &lt; Back</span>
+      </button>
+
       <div className="flex justify-between items-center flex-col md:flex-row gap-4 md:gap-0">
         <div className="w-full md:w-4/12 flex flex-col gap-4">
           <h2 className=" text-3xl font-bold text-[#06bca7] tex-red-500">
@@ -24,14 +48,14 @@ const SpearSecurityForce = () => {
             Safeguards businesses and homes with trained guards, elite armed
             protection, and premium housekeeping services.
           </p>
-          <a
+          {/* <a
             className=" bg-[#7932d9] font-medium w-max block p-3 rounded hover:bg-[#6925c2]"
             href="https://www.spearsecurityforce.in"
             target="_blank"
             rel="noreferrer"
           >
             <span>Visit Website</span>
-          </a>
+          </a> */}
         </div>
         <img
           src={LandingPage}

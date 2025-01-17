@@ -9,6 +9,9 @@ import ColourPalletChecker from "./Pages/ColourPalletChecker";
 import PageLayout from "./PageLayout";
 import AboutMe from "./Pages/AboutMe";
 import ServicesPage from "./Pages/Services";
+import TermsAndConditions from "./Pages/TermsAndConditions";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import SmartTechsHRServices from "./Pages/Projects/SmartTechsHRServices";
 
 function App() {
   return (
@@ -25,6 +28,15 @@ function App() {
             path={RouteNames.SPEAR_SECURITY_FORCE}
             element={<SpearSecurityForce />}
           />
+          <Route
+            path={RouteNames.SMART_TECHS_HR_SERVICES}
+            element={<SmartTechsHRServices />}
+          />
+          <Route
+            path={RouteNames.TERMS_AND_CONDITIONS}
+            element={<TermsAndConditions />}
+          />
+          <Route path={RouteNames.PRIVACY_POLICY} element={<PrivacyPolicy />} />
         </Route>
         <Route path="/pallet" element={<ColourPalletChecker />} />
       </Routes>
