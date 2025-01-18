@@ -12,6 +12,7 @@ import ServicesPage from "./Pages/Services";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import SmartTechsHRServices from "./Pages/Projects/SmartTechsHRServices";
+import PageNotFound from "./Pages/PageNotFound";
 
 function App() {
   return (
@@ -37,8 +38,9 @@ function App() {
             element={<TermsAndConditions />}
           />
           <Route path={RouteNames.PRIVACY_POLICY} element={<PrivacyPolicy />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
-        <Route path="/pallet" element={<ColourPalletChecker />} />
+        {/* <Route path="/pallet" element={<ColourPalletChecker />} /> */}
       </Routes>
     </>
   );

@@ -2,5 +2,9 @@ User-agent: *
 Allow: /
 Allow: /projects
 Disallow: /projects/spear-security-force
+Disallow: /projects/smart-techs-hr-services
 Allow: /services
+Allow: /about-me
 Allow: /contact-me
+Allow: /terms-and-conditions
+Allow: /privacy-policy

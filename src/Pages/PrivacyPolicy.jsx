@@ -1,15 +1,17 @@
 import React, { useEffect } from "react";
+import { useOutletContext } from "react-router-dom";
 
 const PrivacyPolicy = () => {
   useEffect(() => {
     document.title = "Siddu Eswar | Privacy Policy";
     window.scrollTo(0, 0);
   }, []);
+  const { navBarHeight } = useOutletContext();
   return (
     <div
       className="container mx-auto my-8 mb-8 md:px-6 px-2 xs:px-0 space-y-8"
       style={{
-        paddingTop: "80px", // Adjust this value based on your navBarHeight if dynamic.
+        paddingTop: `${navBarHeight}px`, // Adjust this value based on your navBarHeight if dynamic.
       }}
     >
       {/* Section Header */}
