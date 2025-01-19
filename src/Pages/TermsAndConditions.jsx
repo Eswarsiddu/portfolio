@@ -63,9 +63,15 @@ const TermsAndConditions = () => {
           <i className="fa-solid fa-credit-card"></i> Payment Terms
         </h2>
         <p>
-          Payments are securely processed through <strong>Razorpay</strong>.
-          Payment structure may vary based on project type and agreement:
+          All payments must be made exclusively through Razorpay using the
+          secure payment link provided via email. This ensures the highest level
+          of transaction security and creates an automated record for accurate
+          documentation.
         </p>
+        {/* <div className=""></div> */}
+        {/* Payment Structure */}
+        <h3 className="text-xl font-semibold mt-4 mb-2">Payment Structure</h3>
+        <p>Payment structure may vary based on project type and agreement:</p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>0% upfront</strong> for smaller projects or trials.
@@ -78,23 +84,60 @@ const TermsAndConditions = () => {
             projects.
           </li>
         </ul>
+        {/* Policy on Non-Gateway Payments */}
+        <h3 className="text-xl font-semibold mt-4 mb-2">
+          Policy on Non-Gateway Payments
+        </h3>
         <p className="mt-2">
-          Payments are subject to Razorpay’s terms and conditions. Late payments
-          may result in project delays or service suspension until the balance
-          is cleared.
+          Payments made outside the Razorpay payment gateway (e.g., direct UPI
+          or bank transfers) are strongly discouraged. Non-gateway payments will
+          be allowed only with prior written agreement and will require manual
+          processing, which may result in delays or complications in
+          reconciliation.{" "}
+          <strong>Administrative charges will apply for such payments</strong>,
+          though the actual amount will depend on various factors related to the
+          transaction, including payment type, reconciliation time, and
+          transaction complexity.
         </p>
+        {/* Late Payments */}
+        <h3 className="text-xl font-semibold mt-4 mb-2">Late Payments</h3>
         <p className="mt-2">
-          For more details, please refer to{" "}
+          Late payments may result in project delays or service suspension until
+          the balance is cleared. Payments are considered complete only when
+          successfully processed through Razorpay or manually reconciled (in the
+          case of an approved exception).
+        </p>
+        {/* Refund and Dispute Handling */}
+        <h3 className="text-xl font-semibold mt-4 mb-2">
+          Refund and Dispute Handling
+        </h3>
+        <p className="mt-2">
+          Refunds and disputes are handled exclusively for payments made through
+          Razorpay. Non-gateway payments may not qualify for the same level of
+          support or refund options.
+        </p>
+        {/* Razorpay Terms */}
+        <h3 className="text-xl font-semibold mt-4 mb-2">Razorpay Terms</h3>
+        <p className="mt-2">
+          All payments are subject to Razorpay's official{" "}
           <a
             href="https://razorpay.com/terms/"
             target="_blank"
             rel="noreferrer"
             className="text-[#8af9ff] underline"
           >
-            Razorpay's official terms and conditions
+            Terms and Conditions
           </a>
           .
         </p>
+        {/* Invoice Notes
+        <h3 className="text-xl font-semibold mt-4 mb-2">Invoice Notes</h3>
+        <p className="mt-2">
+          For your security and documentation, payments must be made through the
+          Razorpay payment link provided. Non-gateway payments are allowed only
+          in exceptional cases, with prior agreement, and may incur
+          administrative charges that vary depending on the transaction.
+        </p> */}
       </section>
 
       {/* Refund and Cancellation */}
