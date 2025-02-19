@@ -63,10 +63,10 @@ const TermsAndConditions = () => {
           <i className="fa-solid fa-credit-card"></i> Payment Terms
         </h2>
         <p>
-          All payments must be made exclusively through Razorpay using the
-          secure payment link provided via email. This ensures the highest level
-          of transaction security and creates an automated record for accurate
-          documentation.
+          All payments must be made exclusively through Payment Gateway using
+          the secure payment link provided via email. This ensures the highest
+          level of transaction security and creates an automated record for
+          accurate documentation.
         </p>
         {/* <div className=""></div> */}
         {/* Payment Structure */}
@@ -89,9 +89,9 @@ const TermsAndConditions = () => {
           Policy on Non-Gateway Payments
         </h3>
         <p className="mt-2">
-          Payments made outside the Razorpay payment gateway (e.g., direct UPI
-          or bank transfers) are strongly discouraged. Non-gateway payments will
-          be allowed only with prior written agreement and will require manual
+          Payments made outside the Payment gateway (e.g., direct UPI or bank
+          transfers) are strongly discouraged. Non-gateway payments will be
+          allowed only with prior written agreement and will require manual
           processing, which may result in delays or complications in
           reconciliation.{" "}
           <strong>Administrative charges will apply for such payments</strong>,
@@ -104,8 +104,8 @@ const TermsAndConditions = () => {
         <p className="mt-2">
           Late payments may result in project delays or service suspension until
           the balance is cleared. Payments are considered complete only when
-          successfully processed through Razorpay or manually reconciled (in the
-          case of an approved exception).
+          successfully processed through Payment Gateway or manually reconciled
+          (in the case of an approved exception).
         </p>
         {/* Refund and Dispute Handling */}
         <h3 className="text-xl font-semibold mt-4 mb-2">
@@ -113,11 +113,11 @@ const TermsAndConditions = () => {
         </h3>
         <p className="mt-2">
           Refunds and disputes are handled exclusively for payments made through
-          Razorpay. Non-gateway payments may not qualify for the same level of
-          support or refund options.
+          Payment Gateway. Non-gateway payments may not qualify for the same
+          level of support or refund options.
         </p>
         {/* Razorpay Terms */}
-        <h3 className="text-xl font-semibold mt-4 mb-2">Razorpay Terms</h3>
+        {/* <h3 className="text-xl font-semibold mt-4 mb-2">Razorpay Terms</h3>
         <p className="mt-2">
           All payments are subject to Razorpay's official{" "}
           <a
@@ -129,7 +129,7 @@ const TermsAndConditions = () => {
             Terms and Conditions
           </a>
           .
-        </p>
+        </p> */}
         {/* Invoice Notes
         <h3 className="text-xl font-semibold mt-4 mb-2">Invoice Notes</h3>
         <p className="mt-2">
