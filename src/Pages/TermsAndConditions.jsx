@@ -68,7 +68,7 @@ const TermsAndConditions = () => {
           level of transaction security and creates an automated record for
           accurate documentation.
         </p>
-        {/* <div className=""></div> */}
+
         {/* Payment Structure */}
         <h3 className="text-xl font-semibold mt-4 mb-2">Payment Structure</h3>
         <p>Payment structure may vary based on project type and agreement:</p>
